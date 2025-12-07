@@ -1,3 +1,4 @@
+[![Lean Action CI](https://github.com/DavidMazarro/advent-of-code-2025/actions/workflows/lean_action_ci.yml/badge.svg)](https://github.com/DavidMazarro/advent-of-code-2025/actions/workflows/lean_action_ci.yml)
 # Advent of Code 2025 - Solutions in Lean
 
 As of this repo's creation, I have just started learning [Lean](https://lean-lang.org/). 
