@@ -44,7 +44,7 @@ def solveExercise1 (inputFile : System.FilePath) : EIO String Nat := do
     | .ok solution => return solution
     | .error error => throw s!"Program error: {error}"
 
-#eval EIO.toIO IO.userError (solveExercise1 "AdventOfCode2025/Day01/input_day01.txt")
+#eval EIO.toIO IO.userError (solveExercise1 "AdventOfCode2025/inputs/day01.txt")
 
 ---------- Exercise 2 ----------
 
@@ -78,4 +78,4 @@ def solveExercise2 (inputFile : System.FilePath) : EIO String Nat := do
     | .ok solution => return solution
     | .error error => throw s!"Program error: {error}"
 
-#eval EIO.toIO IO.userError (solveExercise2 "AdventOfCode2025/Day01/input_day01.txt")
+#eval EIO.toIO IO.userError (solveExercise2 "AdventOfCode2025/inputs/day01.txt")
