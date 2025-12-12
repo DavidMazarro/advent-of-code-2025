@@ -3,9 +3,9 @@ namespace AdventOfCode2025.Utils
 def sequence [Monad m] : List (m α) → m (List α) :=
   List.mapM id
 
-private def foldlGatherResultsAccum (f : α → β → α) : (init : List α) → init ≠ [] → List β → List α
-  | init, h, [] => init.reverse
-  | init, h, x :: xs => foldlGatherResultsAccum f (f (init.head h) x :: init) (by simp) xs
+private def foldlGatherResultsAccum (f : α → β → α) : (accList : List α) → accList ≠ [] → List β → List α
+  | accList, h, [] => accList.reverse
+  | accList, h, x :: xs => foldlGatherResultsAccum f (f (accList.head h) x :: accList) (by simp) xs
 
 -- This is the same as scanl, I just wanted to define this as an exercise
 def foldlGatherResults (f : α → β → α) (init : α) : List β → List α :=
